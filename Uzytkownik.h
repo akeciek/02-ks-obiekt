@@ -1,3 +1,5 @@
+#ifndef UZYTKOWNIK_H //guardian zeby w programie w kilku miejscach uzyc deklaracji uzytkownik
+#define UZYTKOWNIK_H
 #include <iostream>
 
 using namespace std;
@@ -17,4 +19,4 @@ public:
     string pobierzLogin();
     string pobierzHaslo();
 };
-
+#endif // GRANDPARENT_H
