@@ -2,5 +2,4 @@ bin/
 obj/
 diagramUML.uxf
 02-ks-obiekt.*
-Uzytkownicy.txt
-Adresaci.txt
+*.txt
