@@ -22,6 +22,8 @@ void KsiazkaAdresowa::logowanieUzytkownika()
 void KsiazkaAdresowa::wylogujUzytkownika()
 {
     uzytkownikMenedzer.wylogujUzytkownika();
+    delete adresatManager;
+    adresatManager = NULL;
 }
 
 void KsiazkaAdresowa::wyswietlMenu()

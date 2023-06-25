@@ -20,6 +20,7 @@
 -email : string
 -adres : string
 -
++Adresat()
 +ustawId() : void
 +ustawIdUzytkownika() : void
 +ustawImie() : void
@@ -64,7 +65,7 @@
       <x>630</x>
       <y>180</y>
       <w>370</w>
-      <h>220</h>
+      <h>230</h>
     </coordinates>
     <panel_attributes>KsiazkaAdresowa
 -
@@ -75,6 +76,7 @@
 -
 -wyswietlMenu() : void
 +KsiazkaAdresowa()
++~KsiazkaAdresowa()
 +rejestracjaUzytkownika() : void
 +wypiszWszystkichUzytkownikow() : void
 +logowanieUzytkownika() : void
@@ -127,7 +129,7 @@
     <panel_attributes>PlikZAdresatami
 -
 -idOstatniegoAdresata : int
--nazwaPlikuZAdresatami : const string
+-NAZWA_PLIKU_Z_ADRESATAMI : const string
 -adresaci : vector &lt;Adresat&gt;
 -
 -pobierzLiczbe() : string
@@ -138,7 +140,7 @@
 +PlikZAdresatami()
 +wczytajAdresatowZalogowanegoUzytkownikaZPliku() : vector &lt;Adresat&gt;
 +dodajAdresata() : void
-+dopiszAdresataDoPliku() : void
++dopiszAdresataDoPliku() : bool
 +zmianaHaslaZalogowanegoUzytkownika() : void
 +aktualizujIdOstatniegoAdresata() : void
 +wczytajWszystkichAdresatowZPliku() : vector &lt;Adresat&gt;
@@ -156,7 +158,7 @@
     </coordinates>
     <panel_attributes>PlikZUzytkownikami
 -
--nazwaPlikuZUzytkownikami : const string
+-NAZWA_PLIKU_Z_UZYTKOWNIKAMI : const string
 -uzytkownicy: vector &lt;Uzytkownik&gt;
 -
 -zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : string
@@ -205,7 +207,7 @@
 -plikZUzytkownikami : PlikZUzytkownikami
 -
 -pobierzIdNowegoUzytkownika() : int
--czyIstniejeLogin(string login): bool
+-czyIstniejeLogin(): bool
 -podajDaneNowegoUzytkownika() : Uzytkownik
 +UzytkownikMenedzer()
 +rejestracjaUzytkownika() : void
