@@ -38,15 +38,6 @@ char MetodyPomocnicze::wczytajZnak()
     return znak;
 }
 
-bool MetodyPomocnicze::czyPlikJestPusty(fstream &plikTekstowy)
-{
-    plikTekstowy.seekg(0, ios::end);
-    if (plikTekstowy.tellg() == 0)
-        return true;
-    else
-        return false;
-}
-
 string MetodyPomocnicze::zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik) {
     string liniaZDanymiUzytkownika = "";
 
@@ -90,5 +81,22 @@ string MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst
     return tekst;
 }
 
+int MetodyPomocnicze::wczytajLiczbeCalkowita()
+{
+    {
+    string wejscie = "";
+    int liczba = 0;
 
+    while (true)
+    {
+        getline(cin, wejscie);
+
+        stringstream myStream(wejscie);
+        if (myStream >> liczba)
+            break;
+        cout << "To nie jest liczba. Wpisz ponownie. " << endl;
+    }
+    return liczba;
+}
+}
 

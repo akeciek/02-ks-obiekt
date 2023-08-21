@@ -17,6 +17,8 @@ void KsiazkaAdresowa::logowanieUzytkownika()
     {
         adresatManager = new AdresatManager(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.ustawIDzalogowanegourzytkownika());
     }
+    else
+        return;
 }
 
 void KsiazkaAdresowa::wylogujUzytkownika()
@@ -35,28 +37,43 @@ void KsiazkaAdresowa::wyswietlMenu()
                 break;
             case '2':
                 logowanieUzytkownika();
-                adresatManager->aktualizujIdOstatniegoAdresata();
-
-                if (uzytkownikMenedzer.ustawIDzalogowanegourzytkownika() != 0)
+                if (uzytkownikMenedzer.czyUzytkownikJestZalogowany())
                 {
-                    bool kontynuuj = true;
+                    adresatManager->aktualizujIdOstatniegoAdresata();
 
-                    while (kontynuuj == true) {
-                        switch(menu.wybierzOpcjeZMenuUzytkownika())
-                        {
-                        case '1':
-                            adresatManager->dodajAdresata();
-                            break;
-                        case '4':
-                            adresatManager->wyswietlWszystkichAdresatow();
-                            break;
-                        case '7':
-                            uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
-                            break;
-                        case '8':
-                            kontynuuj = false;
-                            wylogujUzytkownika();
-                            break;
+                    if (uzytkownikMenedzer.ustawIDzalogowanegourzytkownika() != 0)
+                    {
+                        bool kontynuuj = true;
+
+                        while (kontynuuj == true) {
+                            switch(menu.wybierzOpcjeZMenuUzytkownika())
+                            {
+                            case '1':
+                                adresatManager->dodajAdresata();
+                                break;
+                            case '2':
+                                adresatManager->wyszukajAdresatowPoImieniu();
+                                break;
+                            case '3':
+                                adresatManager->wyszukajAdresatowPoNazwisku();
+                                break;
+                            case '4':
+                                adresatManager->wyswietlWszystkichAdresatow();
+                                break;
+                            case '5':
+                                adresatManager->usunAdresata();
+                                break;
+                            case '6':
+                                adresatManager->edytujAdresata();
+                                break;
+                            case '7':
+                                uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
+                                break;
+                            case '8':
+                                kontynuuj = false;
+                                wylogujUzytkownika();
+                                break;
+                            }
                         }
                     }
                 }
