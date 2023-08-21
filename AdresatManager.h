@@ -27,6 +27,11 @@ public:
     void dodajAdresata();
     void wyswietlWszystkichAdresatow();
     void aktualizujIdOstatniegoAdresata();
+    void wyszukajAdresatowPoImieniu();
+    void wyszukajAdresatowPoNazwisku();
+    void usunAdresata();
+    void edytujAdresata();
+
 };
 
 #endif

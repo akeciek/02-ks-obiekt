@@ -17,12 +17,11 @@ public:
     static string konwerjsaIntNaString(int liczba);
     static int konwersjaStringNaInt(string liczba);
     static char wczytajZnak();
-    static bool czyPlikJestPusty(fstream &plikTekstowy);
     static string zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami(Uzytkownik uzytkownik);
     static string zamienDaneAdresataNaLinieZDanymiOddzielonaPionowymiKreskami(Adresat adresat);
     static string wczytajLinie();
     static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
-
+    static int wczytajLiczbeCalkowita();
 };
 
 #endif

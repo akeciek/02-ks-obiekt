@@ -4,8 +4,6 @@
 
 using namespace std;
 
-char wybierzOpcjeZMenuGlownego();
-
 int main()
 {
     KsiazkaAdresowa ksiazkaAdresowa("Uzytkownicy.txt", "Adresaci.txt");
