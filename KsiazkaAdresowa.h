@@ -16,6 +16,11 @@ class KsiazkaAdresowa
     const string NAZWA_PLIKU_Z_ADRESATAMI;
     Menu menu;
     void wyswietlMenu();
+    void rejestracjaUzytkownika();
+    void wypiszWszystkichUzytkownikow();
+    void logowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
+    void wylogujUzytkownika();
 
 public:
     KsiazkaAdresowa(string nazwaPlikuZUzytkownikami, string nazwaPlikuZAdresatami)
@@ -27,12 +32,6 @@ public:
         delete adresatManager;
         adresatManager = NULL;
     };
-    void rejestracjaUzytkownika();
-    void wypiszWszystkichUzytkownikow();
-    void logowanieUzytkownika();
-    void zmianaHaslaZalogowanegoUzytkownika();
-    void wylogujUzytkownika();
-
 };
 
 #endif

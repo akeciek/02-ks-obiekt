@@ -9,3 +9,8 @@ bool PlikTekstowy::czyPlikJestPusty(fstream &plikTekstowy)
     else
         return false;
 }
+
+string PlikTekstowy::getNazwaPliku()
+{
+    return NAZWA_PLIKU;
+}

@@ -22,6 +22,7 @@ public:
     static string wczytajLinie();
     static string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
     static int wczytajLiczbeCalkowita();
+    static int zwrocenieNrAdresata(string wczytanaLinia);
 };
 
 #endif
