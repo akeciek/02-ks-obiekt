@@ -42,21 +42,29 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1233</x>
-      <y>108</y>
+      <x>1224</x>
+      <y>18</y>
       <w>315</w>
-      <h>189</h>
+      <h>315</h>
     </coordinates>
     <panel_attributes>AdresatManager
 -
 -plikZAdresatami : PlikZAdresatami
 -adresaci : vector &lt;Adresat&gt;
 -ID_ZALOGOWANEGO_UZYTKOWNIKA : const int
+-idOstatniegoAdresata: int
 -
-+AdresatManager()
+-podajDaneNowegoAdresata(): Adresat
+-wyswietlDaneAdresata(): void
+-wyswietlIloscWyszukanychAdresatow(): void
+-wyswietlIloscWyszukanychAdresatow(): void
+-podajIdWybranegoAdresata(): int
+-zaktualizujDaneWybranegoAdresata(): void
+-wybierzOpcjeZMenuEdycja(): char
+AdresatManager()
 +dodajAdresata() : void
 +wyswietlWszystkichAdresatow() : void
-+aktualizujIdOstatniegoAdresata() : void
++aktualizujIdOstatniegoAdresata() : int
 +wyszukajAdresatowPoImieniu() : void
 +wyszukajAdresatowPoNazwisku() : void
 +usunAdresata() : void
@@ -67,7 +75,7 @@
     <id>UMLClass</id>
     <coordinates>
       <x>603</x>
-      <y>135</y>
+      <y>99</y>
       <w>333</w>
       <h>207</h>
     </coordinates>
@@ -128,40 +136,29 @@
       <x>1053</x>
       <y>378</y>
       <w>513</w>
-      <h>450</h>
+      <h>306</h>
     </coordinates>
     <panel_attributes>PlikZAdresatami
 -
 -idOstatniegoAdresata : int
--NAZWA_PLIKU_Z_ADRESATAMI : const string
+-idUsuwanegoAdresata: int
 -adresaci : vector &lt;Adresat&gt;
 -
 -pobierzLiczbe() : string
 -pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami() : int
 -pobierzIdAdresataZDanychOddzielonychPionowymiKreskami() : int
--wyswietlDaneAdresata() : void
 -pobierzDaneAdresata() : Adresat
+-usunPlik() : void
+-zmienNazwePliku() : void
 +PlikZAdresatami()
 +wczytajAdresatowZalogowanegoUzytkownikaZPliku() : vector &lt;Adresat&gt;
-+dodajAdresata() : void
 +dopiszAdresataDoPliku() : bool
 +zmianaHaslaZalogowanegoUzytkownika() : void
 +aktualizujIdOstatniegoAdresata() : void
 +wczytajWszystkichAdresatowZPliku() : vector &lt;Adresat&gt;
-+podajDaneNowegoAdresata() : Adresat
 +wyswietlWszystkichAdresatow() : void
--zaktualizujDaneWybranegoAdresata() : void
--podajIdWybranegoAdresata() : int
--edytujWybranaLinieWPliku() : void
--wybierzOpcjeZMenuEdycja() : char
--usunPlik() : void
--zmienNazwePliku() : void
--usunWybranaLinieWPliku() : void
-+wyswietlWszystkichAdresatow() : void
-+wyszukajAdresatowPoImieniu() : void
-+wyszukajAdresatowPoNazwisku() : void
-+usunAdresata() : void
-+edytujAdresata() : void</panel_attributes>
++edytujWybranaLinieWPliku() : void
++usunWybranaLinieWPliku() : void</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -253,13 +250,14 @@
       <x>612</x>
       <y>468</y>
       <w>333</w>
-      <h>81</h>
+      <h>90</h>
     </coordinates>
     <panel_attributes>PlikTekstowy
 -
 -NAZWA_PLIKU : string
 -plikTekstowy : fstream
 -czyPlikJestPusty() : bool
+-getNazwaPliku(): string
 </panel_attributes>
     <additional_attributes/>
   </element>

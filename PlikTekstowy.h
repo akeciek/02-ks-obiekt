@@ -14,6 +14,8 @@ class PlikTekstowy
     const string NAZWA_PLIKU;
 protected:
     fstream plikTekstowy;
+    PlikTekstowy(string nazwaPliku) : NAZWA_PLIKU(nazwaPliku) {};
     bool czyPlikJestPusty(fstream &plikTekstowy);
+    string getNazwaPliku();
 };
 #endif // PLIKTEKSTOWY_H

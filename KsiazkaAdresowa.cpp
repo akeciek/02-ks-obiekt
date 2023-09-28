@@ -17,8 +17,6 @@ void KsiazkaAdresowa::logowanieUzytkownika()
     {
         adresatManager = new AdresatManager(NAZWA_PLIKU_Z_ADRESATAMI, uzytkownikMenedzer.ustawIDzalogowanegourzytkownika());
     }
-    else
-        return;
 }
 
 void KsiazkaAdresowa::wylogujUzytkownika()

@@ -83,7 +83,6 @@ string MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst
 
 int MetodyPomocnicze::wczytajLiczbeCalkowita()
 {
-    {
     string wejscie = "";
     int liczba = 0;
 
@@ -98,5 +97,21 @@ int MetodyPomocnicze::wczytajLiczbeCalkowita()
     }
     return liczba;
 }
+
+int MetodyPomocnicze::zwrocenieNrAdresata(string wczytanaLinia)
+{
+    string pojedynczaDanaAdresata = "";
+    int numerKontaktu;
+    for (size_t pozycjaZnaku = 0; pozycjaZnaku < wczytanaLinia.length(); pozycjaZnaku++)
+    {
+        if (wczytanaLinia[pozycjaZnaku] != '|')
+        {
+            pojedynczaDanaAdresata += wczytanaLinia[pozycjaZnaku];
+        }
+        else
+            break;
+    }
+    numerKontaktu = konwersjaStringNaInt(pojedynczaDanaAdresata);
+    return numerKontaktu;
 }
 
