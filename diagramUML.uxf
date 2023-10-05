@@ -57,11 +57,10 @@
 -podajDaneNowegoAdresata(): Adresat
 -wyswietlDaneAdresata(): void
 -wyswietlIloscWyszukanychAdresatow(): void
--wyswietlIloscWyszukanychAdresatow(): void
 -podajIdWybranegoAdresata(): int
 -zaktualizujDaneWybranegoAdresata(): void
 -wybierzOpcjeZMenuEdycja(): char
-AdresatManager()
++AdresatManager()
 +dodajAdresata() : void
 +wyswietlWszystkichAdresatow() : void
 +aktualizujIdOstatniegoAdresata() : int
@@ -142,7 +141,6 @@ AdresatManager()
 -
 -idOstatniegoAdresata : int
 -idUsuwanegoAdresata: int
--adresaci : vector &lt;Adresat&gt;
 -
 -pobierzLiczbe() : string
 -pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami() : int
@@ -172,7 +170,6 @@ AdresatManager()
     <panel_attributes>PlikZUzytkownikami
 -
 -NAZWA_PLIKU_Z_UZYTKOWNIKAMI : const string
--uzytkownicy: vector &lt;Uzytkownik&gt;
 -
 -zamienDaneUzytkownikaNaLinieZDanymiOddzielonaPionowymiKreskami() : string
 -pobierzDaneUzytkownika() : Uzytkownik
@@ -409,22 +406,22 @@ bg=BLACK</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1179</x>
-      <y>387</y>
-      <w>153</w>
-      <h>117</h>
+      <y>423</y>
+      <w>108</w>
+      <h>81</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>150.0;110.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>100.0;70.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>378</x>
-      <y>162</y>
-      <w>216</w>
-      <h>423</h>
+      <y>171</y>
+      <w>144</w>
+      <h>414</h>
     </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>80.0;450.0;220.0;180.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=&lt;..</panel_attributes>
+    <additional_attributes>100.0;440.0;140.0;120.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>
